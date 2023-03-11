@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    4.Сформувати новий масив, що міститиме значення цін у відсотках стосовно максимального
+
+<br>
+    <script>
+   function getRandomArr(){
+        priceHistory = []
+        for(let i=0; i<20;i++){
+        const randomNum = 1 + Math.floor(Math.random() * 10000)
+        priceHistory.push(randomNum)}
+        return priceHistory
+        }
+     
+        console.log(`Історія цін: ${getRandomArr()}`)
+
+        const maxNum = priceHistory.reduce((prevValue, el)=>
+            el> prevValue ? el : prevValue
+        )
+        console.log(maxNum)
+
+        percentagesRelationMax = priceHistory.map(el=>{
+            return Math.round((el/maxNum)*100)
+        })
+
+        console.log(`Значення цін у відсотках стосовно максимального: ${percentagesRelationMax}`)
+
+    </script>
+</body>
+</html>

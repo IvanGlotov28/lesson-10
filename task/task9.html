@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<body>
+    9.Підрахувати суму цін, що більше за 1000
+    <br>
+    <script>
+     function getRandomArr(){
+        priceHistory = []
+        for(let i=0; i<20;i++){
+        const randomNum = 1 + Math.floor(Math.random() * 10000)
+        priceHistory.push(randomNum)}
+        return priceHistory
+        }
+        console.log(`Історія цін: ${getRandomArr()}`)   
+
+        sumPricesGreaterThan1000 = priceHistory.reduce((prevValue, currentValue)=>{
+        currentValue>1000 ? prevValue+=currentValue : prevValue
+        return prevValue
+        },0)
+        console.log(`Сума цін, що більші за 1000: ${sumPricesGreaterThan1000}`)   
+
+    </script> 
+</body>
+</html>

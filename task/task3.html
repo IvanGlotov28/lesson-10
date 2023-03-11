@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    3.Сформувати список з тих цін, які більші за попереднє значення
+    <br>
+    <script>
+    
+    function getRandomArr(){
+        priceHistory = []
+        for(let i=0; i<20;i++){
+        const randomNum = 1 + Math.floor(Math.random() * 10000)
+        priceHistory.push(randomNum)}
+        return priceHistory
+        }
+     
+        console.log(`Історія цін: ${getRandomArr()}`)
+
+   
+ 
+   pricesGreaterThanPreviousValue = priceHistory.filter((el,i)=>{ 
+    if(el>priceHistory[i-1]) return priceHistory[i]
+    })
+   console.log(pricesGreaterThanPreviousValue)
+
+
+    </script>
+</body>
+</html>

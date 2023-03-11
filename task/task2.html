@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+  2. Сформувати новий масив, у якому є номери тільки тих, що більші за 1000 грн.
+    <br>
+    <script>
+    
+    function getRandomArr(){
+        priceHistory = []
+        for(let i=0; i<20;i++){
+        const randomNum = 1 + Math.floor(Math.random() * 10000)
+        priceHistory.push(randomNum)}
+        return priceHistory
+        }
+     
+        console.log(`Історія цін: ${getRandomArr()}`)
+
+        const indexesPricesMoreThan1000 = priceHistory.map((el, i) => {
+          return i}).filter((el, i) =>{
+            return priceHistory[i]>1000
+          })
+        
+       
+      console.log(`Номери тих, що більші за 1000 грн.: ${indexesPricesMoreThan1000}`)
+
+        
+    </script>
+</body>
+</html>
